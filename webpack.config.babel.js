@@ -1,11 +1,11 @@
-import result from './globalJS';
+import setWebpackEntries from './webpackEntry';
 import path from 'path';
 
 const dir_js = path.resolve(__dirname, 'makeUtils/workFolder/');
 const dir_build = path.resolve(__dirname, 'makeUtils/workFolderDist');
 
 module.exports = {
-	entry: result(dir_js),
+	entry: setWebpackEntries(dir_js),
 	output: {
 		path: dir_build,
 		filename: '[name].bundle.js'
