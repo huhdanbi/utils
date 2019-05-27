@@ -5,7 +5,46 @@
 ###### * 셋팅에 필요한 패키지는 package.json을 확인
 
 ****
-<br>
-<br>
+
+### Proj. tree
+```
+utils
+  ├─ makeUtils
+  │  ├─ workFolder
+  │  │  │
+  │  │  ├─ countDown
+  │  │  │  ├─ index.html
+  │  │  │  └─ js
+  │  │  │     └─ countDown.js
+  │  │  │
+  │  │  └─ string_to_array
+  │  │     ├─ index.html
+  │  │     └─ js
+  │  │        └─ string_to_array.js
+  │  │
+  │  └─ workFolderDist (bundle Output)
+  │     ├─ countDown.bundle.js
+  │     └─ string_to_array.bundle.js
+  │  
+  ├─ node_modules
+  ├─ package.json
+  ├─ README.md
+  ├─ app.js
+  ├─ reqHandler.js
+  ├─ router.js
+  ├─ server.js
+  ├─ webpack.config.babel.js
+  └─ webpackEntry.js
+```
+
 
 ### - webpack.config.babel.js
+```
+
+```
+
+
+### - node app
+```
+
+```
