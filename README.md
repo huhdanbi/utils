@@ -9,22 +9,25 @@
 ### Proj. tree
 ```
 utils
-  ├─ makeUtils
-  │  ├─ workFolder
+  ├─ /makeUtils
+  │  ├─ /workFolder
   │  │  │
-  │  │  ├─ countDown
+  │  │  ├─ /folder1
   │  │  │  ├─ index.html
-  │  │  │  └─ js
-  │  │  │     └─ countDown.js
+  │  │  │  └─ /js
+  │  │  │     └─ folderTest1.js
   │  │  │
-  │  │  └─ string_to_array
+  │  │  └─ /folder2
   │  │     ├─ index.html
-  │  │     └─ js
-  │  │        └─ string_to_array.js
+  │  │     └─ /js
+  │  │        ├─ folderTest2.js
+  │  │        ├─ folderTest2.js 
+  │  │        └─ /innerFolder1
+  │  │           └─ innerJS.js
   │  │
-  │  └─ workFolderDist (bundle Output)
-  │     ├─ countDown.bundle.js
-  │     └─ string_to_array.bundle.js
+  │  └─ /workFolderDist (bundle Output)
+  │     ├─ folder1.bundle.js 
+  │     └─ folder2.bundle.js
   │  
   ├─ node_modules
   ├─ package.json
@@ -38,9 +41,11 @@ utils
 ```
 
 
-### - webpack.config.babel.js
+### ./webpack.config.babel.js
+* ./webpackEntry.js output : webpack entries 
 ```
 
+entries :   ./makeUtils/workFolder/**/*.js
 ```
 
 

@@ -12,5 +12,6 @@ let handle = {};
 folderArr.map((e, i) => {
   handle[`/${e}`] = reqHandler[e];
 });
+console.log('connecting server 4000');
 
 server.start(router.route, handle);

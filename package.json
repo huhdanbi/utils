@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --open",
-    "watch": "webpack --watch",
-    "build": "webpack --config "
+    "build:dev": "webpack-dev-server --hot --open",
+    "build:w": "webpack -w",
+    "start" : "concurrently --kill-others \"npm run build:w\" \"node app\""
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "concurrently": "^4.1.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   }
