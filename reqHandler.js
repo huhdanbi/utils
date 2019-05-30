@@ -4,7 +4,7 @@ const glob = require('glob');
 const getHTML = glob.sync('makeUtils/**/**/**/*.html');
 
 const reqHandler = getHTML.reduce((acc, curr) => {
-  const folder = curr.split('/')[2];
+  const folder = curr.split('makeUtils/')[1];
 
   acc[folder] = (res) => {
     fs.readFile(`${curr}` , (err, data) => {

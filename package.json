@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack-dev-server --hot --open",
-    "build:w": "webpack -w",
-    "start" : "concurrently --kill-others \"npm run build:w\" \"node app\""
-  },
+    "build:dev" : "webpack-dev-server --hot --open",
+    "build:w" : "webpack -w",
+    "start" : "concurrently --kill-others \"node app\" \"npm run build:w\""
+  }, 
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -24,7 +24,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "concurrently": "^4.1.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   }
