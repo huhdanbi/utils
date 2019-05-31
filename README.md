@@ -9,7 +9,7 @@
 ### Proj. tree
 ```
 utils
-  ├─ /makeUtils
+  ├─ /makeUtils (Standard)
   │  ├─ /workFolder
   │  │  │
   │  │  ├─ /folder1
@@ -41,15 +41,27 @@ utils
 ```
 
 
-### ./webpack.config.babel.js
-* ./webpackEntry.js output : webpack entries 
+## - webpack --watch
+Babel 및 bundle 기능 세팅 되어있음.
+```
+- ES2015+ > ES5 
+- bundle output 
+```
+- _'./makeUtils/workFolder'_ 까지 파일구조 맞춰줄 것.
+
+## - node app
+_'index.html'_ 은 생략 가능하나, **마지막엔 '/'를 꼭 붙여줄 것**
+```
+ex) //localhost:4000/workFolder/folder1/(index.html)
 ```
 
-entries :   ./makeUtils/workFolder/**/*.js
+다른 파일은 파일명을 **필수**로 넣어야 함.
+```
+ex) //localhost:4000/workFolder/folder1/test.html
 ```
 
-
-### - node app
+## node app & webpack -w 
+webpack과 node를 동시 실행하려면 터미널에 하단 커맨드 입력
 ```
-
+> npm start
 ```
