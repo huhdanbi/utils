@@ -13,7 +13,7 @@ const route = (handle, pathname, res, req) => {
         '.jpg': 'image/jpeg',
         '.mp3': 'audio/mpeg',
     }
-    const staticPath = __dirname + '/public';
+    const staticPath = __dirname + '/makeUtils';
 　
     if (typeof handle[pathname] === 'function') {
         handle[pathname](res, req);
@@ -21,7 +21,9 @@ const route = (handle, pathname, res, req) => {
         if( staticMap[extension] ) {
             fs.readFile( staticPath + pathname, (err, data) => {
                 res.writeHead(200, {'Content-Type': staticMap[extension]});
+                console.log(staticPath + pathname);
                 res.end(data);
+                
             });
         } else {
             fs.readFile('./views/404.html', (err, data) => {
